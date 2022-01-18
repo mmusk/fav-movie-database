@@ -58,7 +58,7 @@ const startDeleteMovieHandler = movieId => {
   cancelMovieDeletionBtn.addEventListener('click', closeMovieDeletionModal);
   
   confirmMovieDeletionBtn.addEventListener('click', deleteMovieHandler.bind(null, movieId));
-
+  updateUI();
   
 };
 
