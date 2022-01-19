@@ -16,7 +16,7 @@ const toggleBackdrop = () => {
 };
 
 const updateUI = () => {
-  if (movies.length === 0) {
+  if (!movies.length) {
     entryTextSection.style.display = 'block';
   } else {
     entryTextSection.style.display = 'none';
@@ -108,9 +108,9 @@ const addMovieHandler = () => {
   const ratingValue = userInputs[2].value;
 
   if (
-    titleValue.trim() === '' ||
-    imageUrlValue.trim() === '' ||
-    ratingValue.trim() === '' ||
+    !titleValue.trim ||
+    !imageUrlValue.trim ||
+    !ratingValue.trim ||
     +ratingValue < 1 ||
     +ratingValue > 5
   ) {
